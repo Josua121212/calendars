@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule</title>
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 부드러운 그라데이션 배경 */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 캘린더 컨테이너 스타일 */
+        .calendar-card {
+            background: white;
+            padding: 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* iframe 반응형 처리 */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 70%; /* 비율 조정 */
+            overflow: hidden;
+            border-radius: 16px;
+            background-color: #ffffff;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar-card">
+        <!-- 캘린더 영역만 표시 -->
+        <div class="iframe-container">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FSeoul&showPrint=0&src=c2hqam9zaHVhQGdtYWlsLmNvbQ&src=ZmFtaWx5MTQ0MjM5OTM5NTQwNTI5NzgxNDFAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23b39ddb&color=%23d50000&color=%230b8043" 
+                style="border-width:0" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
